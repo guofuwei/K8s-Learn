@@ -18,10 +18,11 @@ spec:
     spec:
       containers:
         - name: hellok8s-container
-          image: hanshan0808/hellok8s:liveness
-          livenessProbe:
+          image: hanshan0808/hellok8s:bad
+          readinessProbe:
             httpGet:
               path: /healthz
               port: 3000
-            initialDelaySeconds: 3
-            periodSeconds: 3
+            initialDelaySeconds: 1
+            successThreshold: 5
+            # periodSeconds: 3
