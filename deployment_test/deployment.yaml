@@ -18,11 +18,11 @@ spec:
     spec:
       containers:
         - name: hellok8s-container
-          image: hanshan0808/hellok8s:bad
-          readinessProbe:
-            httpGet:
-              path: /healthz
-              port: 3000
-            initialDelaySeconds: 1
-            successThreshold: 5
-            # periodSeconds: 3
+          image: hanshan0808/hellok8s:v3
+          # readinessProbe:
+          #   httpGet:
+          #     path: /healthz
+          #     port: 3000
+          #   initialDelaySeconds: 1
+          #   successThreshold: 5
+          # periodSeconds: 3
